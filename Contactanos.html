@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contactanos</title>
+    <link type="text/css" rel="stylesheet" herf="css/estilos.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Style inputs */
+    input[type=text],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    /* Style the container/contact section */
+    .container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 10px;
+    }
+
+    /* Create two columns that float next to eachother */
+    .column {
+        float: left;
+        width: 50%;
+        margin-top: 6px;
+        padding: 20px;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+
+        .column,
+        input[type=submit] {
+            width: 100%;
+            margin-top: 0;
+        }
+    }
+</style>
+
+<body>
+    <!--Menu Principal-->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <h5><a class="navbar-brand" href="Proyecto_semestral.html">Association Gamer</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Proyecto_semestral.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Playstation.html">Playstation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Xbox.html">Xbox</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Steam.html">Steam</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contactanos.html">Contactanos</a>
+                    </li>
+
+                </ul>
+
+
+            </div>
+
+    </nav>
+    <!--Fin Menu Principal-->
+
+    <!--Contactenos-->
+    <div class="container">
+        <div style="text-align:center">
+            <h2>Contáctenos</h2>
+            <p>Soporte de Association Gamer, deje su mensaje:</p>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="Steam/Logo pagina web.jpg" style="width:100%">
+            </div>
+            <div class="column">
+                <form action="Proyecto_semestral.html">
+                    <label for="fname">Nombre Completo</label>
+                    <input type="text" id="fname" name="Escribir Aqui" placeholder="Escibir Aqui">
+                    <label for="lname">Correo Electronico</label>
+                    <input type="text" id="lname" name="Escribir Aqui" placeholder="Escribir Aqui">
+                    <label for="country">Tipo de Problema</label>
+                    <select id="country" name="country">
+                        <option value="australia">Problema en la compra.</option>
+                        <option value="canada">Problema con su codigo.</option>
+                        <option value="usa">Otros.</option>
+                    </select>
+                    <label for="subject">Escribir su Problema</label>
+                    <textarea id="subject" name="subject" placeholder="Escribir Aqui" style="height:170px"></textarea>
+                    <input type="submit" value="Submit" a href>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--Fin Contactenos-->
+
+
+</body>
+
+</html>
