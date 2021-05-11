@@ -11,46 +11,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#error").hide(); //ocultando el div de los errores
-
-            //indicar que las validaciones del formulario se ejecutaran solo cuando se
-            //presione el submit  
-            $("#registrarse").submit(function () {
-                var mensaje = "Por favor revisar los siguientes detalles en el formulario:";
-
-
-                if ($("#correo_electronico").val().trim().length == 0) {
-                    mensaje = mensaje + "<br>El correo electrónico no puede estar vacío";
-                }
-
-                if ($("clave").val().trim().length == 0) {
-                    mensaje = mensaje + "<br>El campo de contraseña esta vacia";
-                }
-
-                if (mensaje != "Por favor revisar los siguientes detalles en el formulario:") {
-                    $("#error").html(mensaje); //mostrando el texto de la variable en el div del html
-                    $("#error").show();//hace visible el div
-                    event.preventDefault();//evita que los datos del formulario se envien
-
-                }
-
-
-
-            });
-
-
-        });
-
-
-
-    </script>
-
 </head>
+<style>
+    body {
+        background-color: rgb(255, 255, 230);
+    }
+</style>
 
 <body>
+    <!--Menu Pricipal-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="Proyecto_semestral.html">Association Gamer</a><br>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
@@ -78,8 +47,8 @@
                     <a class="nav-link" href="Sucursal.html">Sucursal</a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link" href="Tutoriales.html">Tutoriales</a>
-                    </li>
+                    <a class="nav-link" href="Tutoriales.html">Tutoriales</a>
+                </li>
 
             </ul>
             <li class="nav navbar-nav navbar-right">
@@ -91,30 +60,24 @@
 
         </div>
     </nav>
-    <div class="container">
-        <center>
-            <h2>Bienvenido a Association Gamer</h2>
-        </center>
-        <form id="registrarse">
-            <div class="form-group">
-                <label for="email">Correo electronico:</label>
-                <input type="email" class="form-control" id="correo_electronico"
-                    placeholder="Ingrese su correo electronico">
-            </div>
-            <div class="form-group">
-                <label for="pwd">Contraseña:</label>
-                <input type="password" class="form-control" id="clave" placeholder="Ingrese su contraseña">
-            </div>
-
-            <a href="Registrarse.html">¿No posees una cuenta?</a><br>
-            <a href="cambio_contraseña.html">Cambiar contraseña</a><br>
-
-            <br><button type="submit" class="btn btn-primary">Iniciar sesion</button>
-
-
-        </form>
-
-    </div>
+    <!-- Fin Menu Principal-->
+    <center>
+        <h1>Tutorial Steam</h1><br>
+        <iframe width="1300" height="800" src="https://www.youtube.com/embed/B_CEqBjsJOE" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe><br>
+        <h1>Tutorial Xbox one</h1><br>
+        <iframe width="1300" height="800" src="https://www.youtube.com/embed/gdpbrta1TSM" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe><br>
+        <h1>Tutorial Playstation</h1><br>
+        <iframe width="1300" height="800" src="https://www.youtube.com/embed/4OWD9KReD0I" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe><br>
+    </center>
 
 </body>
 

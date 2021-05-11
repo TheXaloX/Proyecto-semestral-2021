@@ -1,12 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Registrarse</title>
+    <link type="text/css" rel="stylesheet" herf="css/estilos.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#error").hide(); //ocultando el div de los errores
+
+            //indicar que las validaciones del formulario se ejecutaran solo cuando se
+            //presione el submit
+            $("#registrarse").submit(function () {
+                var mensaje = "Por favor revisar los siguientes detalles en el formulario:";
+
+                if ($("#nombre_completo").val().trim().length == 0) {
+                    mensaje = mensaje + "<br>El campo nombre no debe estar vacío";
+                }
+
+                if ($("#correo").val().trim().length == 0) {
+                    mensaje = mensaje + "<br>El correo electrónico no puede estar vacío";
+                }
+                if ($("#clave").val().trim().length == 0) {
+                    mensaje = mensaje + "<br>La contraseña no puede estar vacío";
+                }
+
+
+                if (mensaje != "Por favor revisar los siguientes detalles en el formulario:") {
+                    $("#error").html(mensaje); //mostrando el texto de la variable en el div del html
+                    $("#error").show();//hace visible el div
+                    event.preventDefault();//evita que los datos del formulario se envien
+
+                }
+
+
+
+            });
+
+
+        });
+
+
+
+    </script>
+
 </head>
+
 <body>
-    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="Proyecto_semestral.html">Association Gamer</a><br>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navb">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="Proyecto_semestral.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Playstation.html">Playstation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Xbox.html">Xbox</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Steam.html">Steam</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contactanos.html">Contactanos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Sucursal.html">Sucursal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Tutoriales.html">Tutoriales</a>
+                </li>
+
+            </ul>
+            <li class="nav navbar-nav navbar-right">
+                <a class="nav-link" href="Iniciar_sesion.html">Inicio sesion</a>
+
+
+                <a class="nav-link" href="Registrarse.html">Registrate</a>
+            </li>
+
+        </div>
+    </nav>
+
+
+    <div class="container espaciado_superior">
+
+        <center>
+            <h1>Crear una cuenta</h1>
+        </center>
+        <form action="Iniciar_sesion.html" method="POST" name="registrarse" id="registrarse">
+            <div class="form-group">
+                <label for="nombre_completo">Nombre Completo</label>
+                <input type="text" class="form-control" name="nombre_completo" id="nombre_completo"
+                    placeholder="Ingrese su nombre">
+            </div>
+
+            <div class="form-group">
+                <label for="correo">Correo Eletrónico</label>
+                <input type="email" class="form-control" name="correo" id="correo" placeholder="ejemplo@ejemplo.com">
+
+            </div>
+
+
+            <div class="form-group">
+                <label for="clave">Ingrese su contraseña</label>
+                <input type="text" class="form-control" name="contraseña" id="clave">
+            </div>
+
+            <div class="form-group">
+                <label for="clave">Ingrese nuevamente su contraseña</label>
+                <input type="tel" class="form-control" name="contraseña" id="clave">
+            </div>
+
+
+            <div class="form-group">
+                <div id="error" class="alert alert-danger"></div>
+
+                <input type="submit" value="Enviar " href="Proyecto_semestral.html">
+            </div>
+
+
+
+        </form>
+
+    </div>
+
 </body>
+
 </html>

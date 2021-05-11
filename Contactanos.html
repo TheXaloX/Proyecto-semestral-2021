@@ -11,8 +11,52 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#error").hide(); //ocultando el div de los errores
+
+            //indicar que las validaciones del formulario se ejecutaran solo cuando se
+            //presione el submit  
+            $("#formulario_contacto").submit(function () {
+                var mensaje = "Por favor revisar los siguientes detalles en el formulario:";
+
+                if ($("#nombre_completo").val().trim().length == 0) {
+                    mensaje = mensaje + "<br>El campo nombre no debe estar vacío";
+                }
+
+                if ($("#correo_electronico").val().trim().length == 0) {
+                    mensaje = mensaje + "<br>El correo electrónico no puede estar vacío";
+                }
+
+                if (isNaN($("#telefono").val())) {
+                    mensaje = mensaje + "<br>El teléfono solo pueden ser números";
+                }
+
+                if (mensaje != "Por favor revisar los siguientes detalles en el formulario:") {
+                    $("#error").html(mensaje); //mostrando el texto de la variable en el div del html
+                    $("#error").show();//hace visible el div
+                    event.preventDefault();//evita que los datos del formulario se envien
+
+                }
+
+
+
+            });
+
+
+        });
+
+
+
+    </script>
+
 </head>
 <style>
+    body {
+        background-color: rgb(255, 255, 230);
+    }
+
     body {
         font-family: Arial, Helvetica, sans-serif;
     }
@@ -103,14 +147,21 @@
                 <li class="nav-item">
                     <a class="nav-link" href="Contactanos.html">Contactanos</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Sucursal.html">Sucursal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Tutoriales.html">Tutoriales</a>
+                </li>
 
             </ul>
             <li class="nav navbar-nav navbar-right">
-                <a class="nav-link" href="#">Inicio sesion</a>
+                <a class="nav-link" href="Iniciar_sesion.html">Inicio sesion</a>
 
 
-                <a class="nav-link" href="#">Registrate</a>
+                <a class="nav-link" href="Registrarse.html">Registrate</a>
             </li>
+
 
         </div>
     </nav>
@@ -127,11 +178,13 @@
                 <img src="Steam/Logo pagina web.jpg" style="width:100%">
             </div>
             <div class="column">
-                <form action="Proyecto_semestral.html">
+                <form action="Proyecto_semestral.html" id="formulario_contacto">
                     <label for="fname">Nombre Completo</label>
-                    <input type="text" id="nombre_completo" name="Escribir Aqui" placeholder="Escibir Aqui">
+                    <input type="text" id="nombre_completo" name="nombre_completo" placeholder="Escibir Aqui">
                     <label for="lname">Correo Electronico</label>
-                    <input type="text" id="correo_electronico" name="Escribir Aqui" placeholder="Escribir Aqui">
+                    <input type="text" id="correo_electronico" name="correo_electronico" placeholder="Escribir Aqui">
+                    <label for="fname">Telefono</label>
+                    <input type="text" id="telefono" name="telefono" placeholder="Escibir Aqui">
                     <label for="country">Tipo de Problema</label>
                     <select id="country" name="country">
                         <option value="australia">Problema en la compra.</option>
@@ -140,7 +193,8 @@
                     </select>
                     <label for="subject">Escribir su Problema</label>
                     <textarea id="subject" name="subject" placeholder="Escribir Aqui" style="height:170px"></textarea>
-                    <input type="submit" value="Submit" a href>
+                    <div id="error" class="alert alert-danger"></div>
+                    <input type="submit" value="Enviar " a href="  ">
 
                 </form>
             </div>
