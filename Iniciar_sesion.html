@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Iniciar sesion</title>
     <link type="text/css" rel="stylesheet" herf="css/estilos.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -13,12 +13,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
+
         $(document).ready(function () {
             $("#error").hide(); //ocultando el div de los errores
 
             //indicar que las validaciones del formulario se ejecutaran solo cuando se
             //presione el submit  
-            $("#registrarse").submit(function () {
+            $("#Iniciar_sesion").submit(function () {
                 var mensaje = "Por favor revisar los siguientes detalles en el formulario:";
 
 
@@ -78,8 +79,8 @@
                     <a class="nav-link" href="Sucursal.html">Sucursal</a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link" href="Tutoriales.html">Tutoriales</a>
-                    </li>
+                    <a class="nav-link" href="Tutoriales.html">Tutoriales</a>
+                </li>
 
             </ul>
             <li class="nav navbar-nav navbar-right">
@@ -91,11 +92,14 @@
 
         </div>
     </nav>
-    <div class="container">
-        <center>
-            <h2>Bienvenido a Association Gamer</h2>
-        </center>
-        <form id="registrarse">
+
+
+    <form id="Iniciar_sesion">
+        <div class="container">
+            <center>
+                <h2>Bienvenido a Association Gamer</h2>
+            </center>
+
             <div class="form-group">
                 <label for="email">Correo electronico:</label>
                 <input type="email" class="form-control" id="correo_electronico"
@@ -112,9 +116,10 @@
             <br><button type="submit" class="btn btn-primary">Iniciar sesion</button>
 
 
-        </form>
 
-    </div>
+
+        </div>
+    </form>
 
 </body>
 
